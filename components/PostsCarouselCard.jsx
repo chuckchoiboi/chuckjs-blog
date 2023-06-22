@@ -3,8 +3,6 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 const PostsCarouselCard = ({ post }) => {
-	console.log(post);
-
 	return (
 		<div className="relative h-72">
 			<div
@@ -35,7 +33,7 @@ const PostsCarouselCard = ({ post }) => {
 					</p>
 				</div>
 			</div>
-			<Link href={`/post/${post.slug}`}>
+			<Link href={`/post/${post.node.slug}`}>
 				<span className="cursor-pointer absolute w-full h-full" />
 			</Link>
 		</div>

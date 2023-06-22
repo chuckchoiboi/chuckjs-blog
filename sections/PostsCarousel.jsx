@@ -3,7 +3,6 @@ import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 
 import { PostsCarouselCard } from '@/components';
-import { getPosts } from '@/services';
 
 const responsive = {
 	superLargeDesktop: {
@@ -24,17 +23,7 @@ const responsive = {
 	},
 };
 
-const PostsCarousel = () => {
-	const [posts, setPosts] = useState([]);
-	const [dataLoaded, setDataLoaded] = useState(false);
-
-	useEffect(() => {
-		getPosts().then((result) => {
-			setPosts(result);
-			setDataLoaded(true);
-		});
-	}, []);
-
+const PostsCarousel = ({ posts }) => {
 	const customLeftArrow = (
 		<div className="absolute arrow-btn left-0 text-center py-3 cursor-pointer bg-pink-600 rounded-full">
 			<svg
@@ -82,10 +71,9 @@ const PostsCarousel = () => {
 				responsive={responsive}
 				itemClass="px-4"
 			>
-				{dataLoaded &&
-					posts.map((post, index) => (
-						<PostsCarouselCard key={index} post={post} />
-					))}
+				{posts.map((post, index) => (
+					<PostsCarouselCard key={index} post={post} />
+				))}
 			</Carousel>
 		</div>
 	);

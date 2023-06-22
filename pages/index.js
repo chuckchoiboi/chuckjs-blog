@@ -10,7 +10,7 @@ export default function Home({ posts, featuredPosts }) {
 				<link rel="stylesheet" href="/favicon.ico" />
 			</Head>
 			<FeaturedPosts posts={featuredPosts} />
-			<PostsCarousel />
+			<PostsCarousel posts={posts} />
 		</div>
 	);
 }

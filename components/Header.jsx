@@ -1,39 +1,37 @@
-import { useState, useEffect } from 'react';
 import Link from 'next/link';
 
-import { getCategories } from '@/services';
-
 const Header = () => {
-	const [categories, setCategories] = useState([]);
-
-	useEffect(() => {
-		getCategories().then((newCategories) => setCategories(newCategories));
-	}, []);
-
 	return (
-		<div className="container mx-auto px-10 mb-8">
-			<div className="border-b w-full inline-block border-black py-8">
-				<div className="md:float-left block">
-					<Link href="/">
-						<span className="cursor-pointer font-bold text-4xl text-black">
-							ChuckJS
-						</span>
-					</Link>
-				</div>
-				<div className="hidden md:float-left md:contents">
-					{categories.map((category) => (
-						<Link
-							key={category.slug}
-							href={`/category/${category.slug}`}
-						>
-							<span className="md:float-right mt-2 align-middle text-black ml-4 font-semibold cursor-pointer">
-								{category.name}
+		<div className="bg-yellow-400 sticky top-0 z-50 shadow-md">
+			<div className="container mx-auto px-10 mb-8">
+				<div className="w-full inline-block py-4 mb-4 ">
+					<div className="md:float-left block">
+						<Link href="/">
+							<span className="cursor-pointer font-bold text-4xl text-black">
+								ChuckJS
 							</span>
 						</Link>
-					))}
+					</div>
+					<div className="md:float-right mt-2 align-middle ml-4 font-semibold cursor-pointer transition duration-500 transform hover:-translate-y-1">
+						<Link href="https://www.linkedin.com/in/chuckchoi/">
+							<img
+								src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg"
+								className="h-8 max-h-8"
+							/>
+						</Link>
+					</div>
+					<div className="md:float-right mt-2 align-middle ml-4 font-semibold cursor-pointer transition duration-500 transform hover:-translate-y-1">
+						<Link href="https://www.linkedin.com/in/chuckchoi/">
+							<img
+								src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original-wordmark.svg"
+								className="h-8 max-h-8"
+							/>
+						</Link>
+					</div>
 				</div>
 			</div>
 		</div>
 	);
 };
+
 export default Header;

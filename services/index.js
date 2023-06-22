@@ -200,6 +200,7 @@ export const getFeaturedPosts = async () => {
         title
         slug
         createdAt
+		excerpt
       }
     }   
   `;

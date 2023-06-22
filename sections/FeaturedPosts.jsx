@@ -1,6 +1,6 @@
-import { PostCard, FeaturedPostCard2 } from '../components';
+import { PostCard, FeaturedPostCard } from '../components';
 
-const FeaturedPosts2 = ({ posts }) => {
+const FeaturedPosts = ({ posts }) => {
 	return (
 		<div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
 			<div className="lg:col-span-8 col-span-1">
@@ -12,11 +12,11 @@ const FeaturedPosts2 = ({ posts }) => {
 				</div>
 				<div className="flex flex-col justify-between h-full mb-8">
 					{posts.slice(1, 5).map((post) => (
-						<FeaturedPostCard2 post={post} key={post.title} />
+						<FeaturedPostCard post={post} key={post.title} />
 					))}
 				</div>
 			</div>
 		</div>
 	);
 };
-export default FeaturedPosts2;
+export default FeaturedPosts;

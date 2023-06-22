@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import { getPosts, getFeaturedPosts } from '../services';
-import { PostsCarousel, FeaturedPosts2 } from '@/sections';
+import { PostsCarousel, FeaturedPosts } from '@/sections';
 
 export default function Home({ posts, featuredPosts }) {
 	return (
@@ -9,7 +9,7 @@ export default function Home({ posts, featuredPosts }) {
 				<title>ChuckJS Blog</title>
 				<link rel="stylesheet" href="/favicon.ico" />
 			</Head>
-			<FeaturedPosts2 posts={featuredPosts} />
+			<FeaturedPosts posts={featuredPosts} />
 			<PostsCarousel />
 		</div>
 	);

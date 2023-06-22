@@ -2,7 +2,7 @@ import moment from 'moment';
 import Image from 'next/image';
 import Link from 'next/link';
 
-const FeaturedPostCard2 = ({ post }) => {
+const FeaturedPostCard = ({ post }) => {
 	return (
 		<Link
 			href={`/post/${post.slug}`}
@@ -52,4 +52,4 @@ const FeaturedPostCard2 = ({ post }) => {
 		</Link>
 	);
 };
-export default FeaturedPostCard2;
+export default FeaturedPostCard;

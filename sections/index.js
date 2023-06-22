@@ -1,2 +1,2 @@
 export { default as PostsCarousel } from './PostsCarousel';
-export { default as FeaturedPosts2 } from './FeaturedPosts2';
+export { default as FeaturedPosts } from './FeaturedPosts';

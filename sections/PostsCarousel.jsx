@@ -71,8 +71,8 @@ const PostsCarousel = ({ posts }) => {
 				responsive={responsive}
 				itemClass="px-4"
 			>
-				{posts.map((post, index) => (
-					<PostsCarouselCard key={index} post={post} />
+				{posts.map((post) => (
+					<PostsCarouselCard post={post} />
 				))}
 			</Carousel>
 		</div>

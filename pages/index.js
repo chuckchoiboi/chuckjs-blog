@@ -1,8 +1,8 @@
 import Head from 'next/head';
-import { getPosts, getFeaturedPosts } from '../services';
-import { PostsCarousel, FeaturedPosts } from '@/sections';
+import { getHomePageData } from '../services';
+import { PostsCarousel, FeaturedPosts, CategoryPosts } from '@/sections';
 
-export default function Home({ posts, featuredPosts }) {
+export default function Home({ posts, featuredPosts, categories }) {
 	return (
 		<div className="container mx-auto px-10 mb-8">
 			<Head>
@@ -10,16 +10,26 @@ export default function Home({ posts, featuredPosts }) {
 				<link rel="stylesheet" href="/favicon.ico" />
 			</Head>
 			<FeaturedPosts posts={featuredPosts} />
+			{categories.map((category, index) => (
+				<CategoryPosts
+					category={category}
+					key={category.slug}
+					index={index}
+				/>
+			))}
 			<PostsCarousel posts={posts} />
 		</div>
 	);
 }
 
 export async function getStaticProps() {
-	const posts = (await getPosts()) || [];
-	const featuredPosts = (await getFeaturedPosts()) || [];
+	const HomePageData = (await getHomePageData()) || [];
 
 	return {
-		props: { posts, featuredPosts },
+		props: {
+			posts: HomePageData.postsConnection.edges,
+			featuredPosts: HomePageData.posts,
+			categories: HomePageData.categories,
+		},
 	};
 }

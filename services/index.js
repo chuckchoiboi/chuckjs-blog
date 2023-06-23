@@ -258,3 +258,82 @@ export const getRecentPosts = async () => {
 
 	return result.posts;
 };
+
+export const getHomePageData = async () => {
+	const query = gql`
+		query HomePageData {
+			postsConnection {
+				edges {
+					cursor
+					node {
+						author {
+							bio
+							name
+							id
+							photo {
+								url
+							}
+						}
+						createdAt
+						slug
+						title
+						excerpt
+						featuredImage {
+							url
+						}
+						categories {
+							name
+							slug
+						}
+					}
+				}
+			}
+
+			posts(where: { featuredPost: true }) {
+				author {
+					name
+					photo {
+						url
+					}
+				}
+				featuredImage {
+					url
+				}
+				title
+				slug
+				createdAt
+				excerpt
+			}
+
+			categories {
+				name
+				slug
+				posts(first: 4) {
+					author {
+						bio
+						name
+						id
+						photo {
+							url
+						}
+					}
+					createdAt
+					slug
+					title
+					excerpt
+					featuredImage {
+						url
+					}
+					categories {
+						name
+						slug
+					}
+				}
+			}
+		}
+	`;
+
+	const result = await request(graphqlAPI, query);
+
+	return result;
+};

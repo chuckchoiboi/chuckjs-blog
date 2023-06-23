@@ -8,9 +8,9 @@ const FeaturedPostCard = ({ post }) => {
 			href={`/post/${post.slug}`}
 			className="transition duration-500 transform hover:-translate-y-1"
 		>
-			<div class="container mx-auto">
-				<div class="grid grid-cols-3 gap-1">
-					<div class="col-span-1">
+			<div className="container mx-auto">
+				<div className="grid grid-cols-3 gap-1">
+					<div className="col-span-1">
 						<Image
 							src={post.featuredImage.url}
 							alt={post.title}
@@ -21,21 +21,21 @@ const FeaturedPostCard = ({ post }) => {
 						/>
 					</div>
 
-					<div class="col-span-2 ml-5">
+					<div className="col-span-2 ml-5">
 						<div className="flex flex-col gap-2 justify-between ">
-							<h3 class="font-semibold transition duration-500 ease hover:text-opacity-20">
+							<h3 className="font-semibold transition duration-500 ease hover:text-opacity-20">
 								{' '}
 								{post.title.length > 51
 									? post.title.slice(0, 51) + '...'
 									: post.title}
 							</h3>
 
-							<div class="flex justify-between">
-								<p class="inline text-gray-500 text-md">
+							<div className="flex justify-between">
+								<p className="inline text-gray-500 text-md">
 									{post.author.name}
 								</p>
 								<time
-									class="inline text-gray-500 text-md"
+									className="inline text-gray-500 text-md"
 									datetime={moment(post.createdAt).format(
 										'MMM DD, YYYY'
 									)}

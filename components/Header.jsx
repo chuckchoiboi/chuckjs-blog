@@ -21,7 +21,7 @@ const Header = () => {
 						</Link>
 					</div>
 					<div className="md:float-right mt-2 align-middle ml-4 font-semibold cursor-pointer transition duration-500 transform hover:-translate-y-1">
-						<Link href="https://www.linkedin.com/in/chuckchoi/">
+						<Link href="https://github.com/chuckchoiboi">
 							<img
 								src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original-wordmark.svg"
 								className="h-8 max-h-8"

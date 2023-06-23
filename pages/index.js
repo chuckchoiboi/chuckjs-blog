@@ -22,7 +22,7 @@ export default function Home({ posts, featuredPosts, categories }) {
 					All Posts
 					<span
 						className="h-[3px] flex-grow border-0 block"
-						style={{ backgroundColor: 'white' }}
+						style={{ backgroundColor: 'black' }}
 					></span>
 				</h2>
 			</div>

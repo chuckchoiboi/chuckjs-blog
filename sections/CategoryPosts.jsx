@@ -3,8 +3,8 @@ import Link from 'next/link';
 
 const CategoryPosts = ({ category, index }) => {
 	const categoryPosts = category.posts;
-	const num = index % 4;
-	const colors = ['#E11845', '#10b981', '#a855f7', '#FFFFFF'];
+	const num = index % 3;
+	const colors = ['#E11845', '#10b981', '#a855f7'];
 
 	return (
 		<div className="pb-12 px-2">

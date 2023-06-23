@@ -4,7 +4,7 @@ const Header = () => {
 	return (
 		<div className="bg-yellow-400 sticky top-0 z-50 shadow-md">
 			<div className="container mx-auto px-10 mb-8">
-				<div className="w-full inline-block py-4 mb-4 ">
+				<div className="w-full inline-block py-4">
 					<div className="md:float-left block">
 						<Link href="/">
 							<span className="cursor-pointer font-bold text-4xl text-black">

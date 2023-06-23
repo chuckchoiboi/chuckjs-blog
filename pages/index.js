@@ -17,6 +17,15 @@ export default function Home({ posts, featuredPosts, categories }) {
 					index={index}
 				/>
 			))}
+			<div className="items-baseline flex gap-1 mb-6 mx-2">
+				<h2 className="text-3xl font-semi-bold flex-grow items-baseline flex gap-1 m-0">
+					All Posts
+					<span
+						className="h-[3px] flex-grow border-0 block"
+						style={{ backgroundColor: 'white' }}
+					></span>
+				</h2>
+			</div>
 			<PostsCarousel posts={posts} />
 		</div>
 	);

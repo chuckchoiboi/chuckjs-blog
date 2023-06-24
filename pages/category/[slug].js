@@ -20,7 +20,7 @@ const CategoryPost = ({ posts }) => {
 				</div>
 				<div className="col-span-1 lg:col-span-8">
 					{posts.map((post, index) => (
-						<PostCard key={index} post={post.node} />
+						<PostCard key={index} post={post.title} />
 					))}
 				</div>
 			</div>

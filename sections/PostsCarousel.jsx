@@ -71,8 +71,8 @@ const PostsCarousel = ({ posts }) => {
 				responsive={responsive}
 				itemClass="px-4"
 			>
-				{posts.map((post) => (
-					<PostsCarouselCard post={post} />
+				{posts.map((post, idx) => (
+					<PostsCarouselCard post={post} key={idx} />
 				))}
 			</Carousel>
 		</div>

@@ -36,7 +36,7 @@ const FeaturedPostCard = ({ post }) => {
 								</p>
 								<time
 									className="inline text-gray-500 text-md"
-									datetime={moment(post.createdAt).format(
+									dateTime={moment(post.createdAt).format(
 										'MMM DD, YYYY'
 									)}
 								>

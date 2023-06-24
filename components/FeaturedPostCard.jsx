@@ -10,7 +10,7 @@ const FeaturedPostCard = ({ post }) => {
 		>
 			<div className="container mx-auto">
 				<div className="grid grid-cols-3 gap-1">
-					<div className="col-span-1">
+					<div className="col-span-1 lg:hidden xl:block">
 						<Image
 							src={post.featuredImage.url}
 							alt={post.title}
@@ -21,7 +21,7 @@ const FeaturedPostCard = ({ post }) => {
 						/>
 					</div>
 
-					<div className="col-span-2 ml-5">
+					<div className="col-span-2 ml-5 lg:col-span-3 xl:col-span-2">
 						<div className="flex flex-col gap-2 justify-between ">
 							<h3 className="font-semibold transition duration-500 ease hover:text-opacity-20">
 								{' '}

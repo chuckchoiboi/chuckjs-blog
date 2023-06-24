@@ -1,38 +1,61 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# ChuckJS (Blog App)
+
+This is a blog application built with React, Next.js, GraphQL (Hygraph), Tailwind, and Sass. It allows users to read and interact with various blog posts. The application consists of three main pages: Home, Post Detail, and Category.
+
+## Pages
+
+### Home Page
+
+The Home page serves as the main landing page for the blog app. It features the following sections:
+
+-   **Featured Posts**: This section highlights selected blog posts that are deemed noteworthy or important.
+-   **Category Sections**: Each category has its own section displaying four posts associated with that category.
+-   **All Posts Carousel**: A carousel showcasing all available blog posts.
+
+### Post Detail Page
+
+The Post Detail page displays the complete content of a specific blog post. It includes the following information:
+
+-   **Featured Image**: An eye-catching image representing the blog post.
+-   **Title**: The title of the blog post.
+-   **Content**: The main body of the blog post.
+-   **Creation Date**: The date the blog post was created.
+-   **Author Name**: The name of the author, along with their avatar and additional details.
+-   **Comments**: Users can leave comments at the bottom of the blog post. These comments are submitted via a GraphQL post request. The author of the blog post has the option to accept or decline comments, and only accepted comments will be displayed.
+
+The left side of the blog post contains two sidebars:
+
+-   **Related Posts**: A component that shows other blog posts sharing the same tag, excluding the current post.
+-   **Categories Sidebar**: A sidebar displaying a list of categories found in the blog. Clicking on a category links to the corresponding category page.
+
+### Category Page
+
+The Category page displays blog posts that belong to a specified category.
+
+## Tech Stack
+
+The blog app is built using the following technologies and frameworks:
+
+-   **React**: A JavaScript library for building user interfaces.
+-   **Next.js**: A React framework for server-side rendering and static site generation.
+-   **GraphQL (Hygraph)**: A query language for APIs, used for fetching and managing data.
+-   **Tailwind**: A utility-first CSS framework for rapid UI development.
+-   **Sass**: A CSS preprocessor that enhances the capabilities of CSS.
 
 ## Getting Started
 
-First, run the development server:
+To run the blog app locally, follow these steps:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+1. Clone the repository: `git clone <repository-url>`
+2. Install dependencies: `npm install`
+3. Set up the environment variables to connect to your Hygraph (Formerly known as Graph CMS):
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+    - Create a .env.local file in the root directory of the project.
+    - Add the following environment variables to the .env.local file:
+        - NEXT_PUBLIC_GRAPHCMS_ENDPOINT=`your-graphql-endpoint`
+        - GRAPHCMS_TOKEN=`your-graphql-token`
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+4. Start the development server: `npm run dev`
+5. Open your browser and navigate to `http://localhost:3000` to view the app.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Make sure you have Node.js and npm installed on your machine before running the above commands.

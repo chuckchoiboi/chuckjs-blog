@@ -3,7 +3,6 @@ import Image from 'next/image';
 import moment from 'moment';
 
 const CategoryCard = ({ post }) => {
-	console.log(post);
 	return (
 		<Link href={`/post/${post.slug}`}>
 			<div className="grid grid-cols-7 min-h-full transition duration-500 transform hover:-translate-y-1">

@@ -1,5 +1,7 @@
 # ChuckJS (Blog App)
 
+[App Link](https://chuckjs-blog.vercel.app)
+
 This is a blog application built with React, Next.js, GraphQL (Hygraph), Tailwind, and Sass. It allows users to read and interact with various blog posts. The application consists of three main pages: Home, Post Detail, and Category.
 
 ## Pages

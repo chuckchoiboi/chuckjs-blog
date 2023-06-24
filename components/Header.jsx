@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 const Header = () => {
 	return (
@@ -14,17 +15,23 @@ const Header = () => {
 					</div>
 					<div className="float-right mt-2 align-middle ml-4 font-semibold cursor-pointer transition duration-500 transform hover:-translate-y-1">
 						<Link href="https://www.linkedin.com/in/chuckchoi/">
-							<img
+							<Image
 								src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg"
 								className="h-8 max-h-8"
+								width={32}
+								height={32}
+								alt="linkedin-logo"
 							/>
 						</Link>
 					</div>
 					<div className="float-right mt-2 align-middle ml-4 font-semibold cursor-pointer transition duration-500 transform hover:-translate-y-1">
 						<Link href="https://github.com/chuckchoiboi">
-							<img
+							<Image
 								src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original-wordmark.svg"
 								className="h-8 max-h-8"
+								width={32}
+								height={32}
+								alt="github-logo"
 							/>
 						</Link>
 					</div>

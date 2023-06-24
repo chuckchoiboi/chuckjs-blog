@@ -66,8 +66,8 @@ const PostsCarousel = ({ posts }) => {
 		<div className="mb-8">
 			<Carousel
 				infinite
-				customLeftArrow={customLeftArrow}
-				customRightArrow={customRightArrow}
+				customleftarrow={customLeftArrow}
+				customrightarrow={customRightArrow}
 				responsive={responsive}
 				itemClass="px-4"
 			>

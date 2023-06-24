@@ -10,8 +10,8 @@ const CategoryCard = ({ post }) => {
 					<Image
 						src={post.featuredImage.url}
 						alt={post.title}
-						style={{ objectFit: 'cover' }}
 						fill
+						sizes="100vw"
 						loading="lazy"
 						aria-hidden="true"
 					/>

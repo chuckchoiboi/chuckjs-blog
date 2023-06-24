@@ -1,6 +1,6 @@
 import { Fragment } from 'react';
-
 import moment from 'moment';
+import Image from 'next/image';
 
 const PostDetail = ({ post }) => {
 	const getContentFragment = (index, text, obj, type) => {
@@ -47,7 +47,7 @@ const PostDetail = ({ post }) => {
 				);
 			case 'image':
 				return (
-					<img
+					<Image
 						key={index}
 						alt={obj.title}
 						height={obj.height}
@@ -63,20 +63,24 @@ const PostDetail = ({ post }) => {
 	return (
 		<div className="bg-white shadow-lg rounded-lg lg:p-8 pb-12 mb-8">
 			<div className="relative overflow-hidden shadow-md mb-6">
-				<img
+				<Image
 					src={post.featuredImage.url}
 					alt={post.title}
 					className="object-top h-full w-full rounded-t-lg"
+					width={0}
+					height={0}
+					fill={false}
+					sizes="100vw"
 				/>
 			</div>
 			<div className="px-4 lg:px-0">
 				<div className="flex items-center mb-8 w-full">
 					<div className="flex items-center mb-4 lg:mb-0 w-full lg:w-auto mr-8">
-						<img
+						<Image
 							src={post.author.photo.url}
 							alt={post.author.name}
-							height="30px"
-							width="30px"
+							height={30}
+							width={30}
 							className="align-middle rounded-full"
 						/>
 						<p className="inline align-middle text-gray-700 ml-2 text-lg">

@@ -19,8 +19,13 @@ const PostCard = ({ post }) => {
 					<p className="text-lg text-gray-700 font-normal mb-8">
 						{post.excerpt}
 					</p>
-					<div className="block lg:flex mb-8 w-full">
-						<div className="flex items-center justify-center mb-4 lg:mb-0 w-full lg:w-auto mr-8">
+					<div className="mb-8 w-full">
+						<div className="font-medium text-gray-700 mb-6">
+							<span>
+								{moment(post.createdAt).format('MMM DD, YYYY')}
+							</span>
+						</div>
+						<div className="flex items-center mb-4 lg:mb-0 w-full lg:w-auto mr-8">
 							<img
 								src={post.author.photo.url}
 								alt={post.author.name}
@@ -31,11 +36,6 @@ const PostCard = ({ post }) => {
 							<p className="inline align-middle text-gray-700 ml-2 text-lg">
 								{post.author.name}
 							</p>
-						</div>
-						<div className="font-medium text-gray-700">
-							<span>
-								{moment(post.createdAt).format('MMM DD, YYYY')}
-							</span>
 						</div>
 					</div>
 				</div>

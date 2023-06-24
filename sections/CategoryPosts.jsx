@@ -26,7 +26,7 @@ const CategoryPosts = ({ category, index }) => {
 			</div>
 
 			<div className="grid grid-cols-1 mt-5">
-				<ul className="grid grid-cols-2 gap-6">
+				<ul className="grid lg:grid-cols-2 gap-6">
 					{categoryPosts.map((post) => (
 						<li key={post.slug}>
 							<CategoryCard post={post} />

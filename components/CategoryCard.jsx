@@ -1,7 +1,9 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import moment from 'moment';
 
 const CategoryCard = ({ post }) => {
+	console.log(post);
 	return (
 		<Link href={`/post/${post.slug}`}>
 			<div className="grid grid-cols-7 min-h-full transition duration-500 transform hover:-translate-y-1">
@@ -23,8 +25,8 @@ const CategoryCard = ({ post }) => {
 							: post.excerpt}
 					</p>
 					<div className="text-md text-gray-500 flex justify-between">
-						<p>HubSpot</p>
-						<p>6/22/23</p>
+						<p>{post.author.name}</p>
+						<p>{moment(post.createdAt).format('MMM DD, YYYY')}</p>
 					</div>
 				</div>
 			</div>

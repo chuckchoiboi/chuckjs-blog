@@ -6,7 +6,7 @@ const CategoryCard = ({ post }) => {
 	return (
 		<Link href={`/post/${post.slug}`}>
 			<div className="grid grid-cols-7 min-h-full transition duration-500 transform hover:-translate-y-1">
-				<div className="col-span-2 relative mr-2">
+				<div className="col-span-2 relative mr-2 hidden sm:block">
 					<Image
 						src={post.featuredImage.url}
 						alt={post.title}
@@ -16,7 +16,7 @@ const CategoryCard = ({ post }) => {
 						aria-hidden="true"
 					/>
 				</div>
-				<div className="col-span-5 mr-4 border-b border-gray-500 flex flex-col justify-between">
+				<div className="sm:col-span-5 col-span-7 mr-4 border-b border-gray-500 flex flex-col justify-between">
 					<h3 className="text-md font-semibold mb-2">{post.title}</h3>
 					<p className="text-md mb-1">
 						{post.excerpt.length > 16
